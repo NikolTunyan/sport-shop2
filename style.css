@@ -1,0 +1,216 @@
+/* Հիմնական ոճեր */
+body {
+    font-family: 'Noto Sans Armenian', 'Arial', sans-serif; /* Հայատառ տառատեսակ */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Սպիտակ ֆոն */
+    color: #2d2d2d; /* Մուգ մոխրագույն տեքստ */
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Հղումները ժառանգում են ծնողի գույնը */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #2d2d2d; /* Սև կոճակ */
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 700; /* Bold */
+    text-align: center;
+    border-radius: 4px;
+    text-transform: uppercase; /* Մեծատառ */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #555; /* Մոխրագույն՝ հովերի ժամանակ */
+    transform: translateY(-1px);
+}
+
+/* Մուտքի էջի ոճեր */
+.entry-container {
+    max-width: 600px;
+    margin: 100px auto 50px; /* Կենտրոնացում և օդ */
+    padding: 40px;
+    text-align: center;
+    background-color: #f9f9f9; /* Շատ բաց մոխրագույն */
+    border-radius: 8px;
+}
+
+.entry-container h1 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.entry-container p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Header (Խանութի էջ) */
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5; /* Նուրբ ստորին գիծ */
+    padding: 15px 0;
+    position: sticky; /* Կպչուն header */
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1280px; /* Ավելի լայն կոնտեյներ */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.logo-text {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #2d2d2d;
+}
+
+.main-nav a {
+    margin-left: 25px;
+    font-size: 1em;
+    font-weight: 500;
+    color: #2d2d2d;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: #007bff; /* Կապույտ՝ հովերի ժամանակ */
+}
+
+/* Խանութի հիմնական մաս */
+.store-container {
+    max-width: 1280px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.store-container h2 {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* Ապրանքների ցանց */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ադապտիվ սյուներ */
+    gap: 30px; /* Ավելի մեծ տարածություն */
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 4px;
+    overflow: hidden; /* Կլորացված անկյունները նկարի համար */
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Ավելի ընդգծված ստվեր */
+}
+
+.product-link {
+    display: block; /* Հղումը զբաղեցնում է տարածք */
+    text-decoration: none;
+    color: inherit;
+    flex-grow: 1; /* Թույլ է տալիս քարտին զբաղեցնել ամբողջ բարձրությունը */
+}
+
+.product-image-container {
+    background-color: #f1f1f1; /* Ֆոն նկարի տակ */
+    aspect-ratio: 3 / 4; /* Նկարի չափերի հարաբերակցություն (ինչպես հագուստի մոդելները) */
+    overflow: hidden;
+}
+
+.product-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Նկարը լցնում է կոնտեյները՝ պահպանելով համամասնությունը */
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image-container img {
+    transform: scale(1.05); /* Թեթև մեծացում նկարի վրա */
+}
+
+.product-info {
+    padding: 15px;
+    text-align: left; /* Ձախից հավասարեցում */
+}
+
+.product-info h3 {
+    font-size: 1em; /* Մի փոքր փոքրացնենք անվանումը */
+    font-weight: 500; /* Normal քաշ */
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+    min-height: 40px; /* Որպեսզի անվանումները մոտավորապես նույն տեղն զբաղեցնեն */
+}
+
+.product-info .price {
+    font-size: 1.1em;
+    font-weight: 700; /* Bold գին */
+    color: #2d2d2d;
+    margin: 0;
+}
+
+.product-actions {
+    padding: 0 15px 15px; /* Ներքևի մասի padding */
+    margin-top: auto; /* Կոնտակտները մղում է ներքև */
+    text-align: left;
+}
+
+.product-actions .contact-info {
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px 0 0 0;
+}
+
+/* Ստորագիր (Footer) */
+.main-footer {
+    background-color: #f9f9f9; /* Բաց մոխրագույն ֆոն */
+    color: #666;
+    padding: 30px 0;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 1px solid #e5e5e5; /* Նուրբ վերին գիծ */
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-container p {
+    margin: 5px 0;
+}
